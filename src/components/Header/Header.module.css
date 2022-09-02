@@ -1,0 +1,20 @@
+header {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.header__ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+.header__li {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.others {
+    background: url(src/img/bkg-img-dark.jpg) no-repeat center center fixed;
+    background-size: cover;
+}

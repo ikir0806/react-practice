@@ -1,0 +1,45 @@
+.greetings {
+    display: flex;
+    flex-direction: column;
+    /* position: relative; */
+
+    &__wrp {
+        padding: 100px 80px 0 0;
+        display: flex;
+        align-items: center;
+        display: grid;
+        grid-gap: 1.5rem;
+    }
+
+    &__company {
+        /* left: 545px;
+        top: 20px;
+        position: absolute; */
+        color: white;
+        font-size: 50px;
+        margin: 0 auto;
+    }
+
+    &__title {
+        text-align: center;
+        color: white;
+        font-size: 40px;
+        line-height: 26px;
+        padding: 70px 0 0 0;
+    }
+
+    &__description {
+        text-align: center;
+        color: white;
+        font-size: 24px;
+        line-height: 36px;
+        padding: 50px 0 0 0;
+    }
+
+    &__logo {
+        /* padding: 0 150px 0 0; */
+        margin: 0 auto;
+        width: 120px;
+        min-height: 120px;
+    }
+}
