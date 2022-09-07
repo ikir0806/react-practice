@@ -31,29 +31,10 @@
         width: 200px;
     }
 
-    /* &__swiper-button-prev {
-        left: 0;
-    }
-
-    &__swiper-button-next {
-        right: 0;
-    } */
-
     &__swiper_button_prev,
     &__swiper_button_next {
         color: white;
-        /* background-color: rgba(20, 20, 20, 0.7);
-        height: 100%;
-        width: 4%;
-        top: 0;
-        bottom: 0;
-        margin: 0;     */
     }
-
-    /* &__swiper:hover &__swiper-button-prev,
-    &__swiper:hover &__swiper-button-next {
-        display: block;
-    } */
 
     &__swiper_button_prev:hover,
     &__swiper_button_next:hover {

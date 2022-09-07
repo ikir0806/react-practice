@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const BundleAnalyzerPlugin =
     require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 const isDev = process.env.NODE_ENV === 'development';
 const withReport = process.env.npm_config_withReport;
@@ -29,7 +30,15 @@ module.exports = {
             {
                 exclude: /node_modules/,
                 test: /\.(j|t)sx?$/,
-                use: ['babel-loader'],
+                use: {
+                    loader: ['babel-loader'],
+                    options: {
+                        presets: [
+                            ['env', { 'modules': false }],
+                            'react',
+                        ],
+                    }
+                },
             },
             {
                 exclude: /\.module\.s?css$/i,
@@ -97,6 +106,10 @@ module.exports = {
         maxEntrypointSize: 512000,
     },
     plugins: [
+        new webpack.optimize.UglifyJsPlugin({
+            include: /\.min\.js$/,
+            minimize: true
+        }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './public/index.html'),
         }),
@@ -109,6 +122,7 @@ module.exports = {
                 }),
             ]),
         ...(withReport ? new BundleAnalyzerPlugin() : ''),
+        new UglifyJsPlugin(),
     ],
     resolve: {
         alias: {

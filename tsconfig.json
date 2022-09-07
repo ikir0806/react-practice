@@ -107,6 +107,7 @@
   },
   "include": [
     "src/**/*",
-    "./jest.config.js"
+    "./jest.config.js",
+    "src/bundle/swiper-bundle.min.js"
   ]
 }

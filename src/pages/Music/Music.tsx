@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import style_bundle from 'src/css/swiper-bundle.module.css';
+import style_bundle from 'src/bundle/swiper-bundle.module.css';
 import style from './Music.module.scss';
 
 export const Music = () => {
